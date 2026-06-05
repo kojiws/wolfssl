@@ -44156,6 +44156,8 @@ static int x25519_nonblock_test(WC_RNG* rng)
 #if defined(DEBUG_WOLFSSL) || defined(WOLFSSL_DEBUG_NONBLOCK)
     /* CURVE25519 non-block key gen: 5335 times */
     printf("CURVE25519 non-block key gen: %d times\n", count);
+#else
+    (void)count;
 #endif
 
     ret = wc_curve25519_init(&userB);
